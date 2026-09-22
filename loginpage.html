@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Your Website</title>
+
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+
+<body>
+    
+    <div class="background">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+    </div>
+
+    <main class="login-container">
+        
+        <section class="login-card">
+            
+            <div class="brand">
+                <div class="logo">AMFLIP</div>
+                <h1>Welcome Back</h1>
+                <p>Sign in to continue to your account</p>
+            </div>
+            
+            <form onsubmit="login(event)">
+            
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+            
+                <div class="input-group">
+                    <div class="password-label">
+                        <label for="password">Password</label>
+                        <a href="./forgetpss.html">Forgot password?</a>
+                    </div>
+            
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+            
+                <div class="remember">
+                    <label>
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </label>
+                </div>
+            
+                <button type="submit" class="login-btn">
+                    Sign In
+                    <span>→</span>
+                </button>
+            
+                <p id="result"></p>
+            
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button class="google-btn">
+                <span class="google-icon">G</span>
+                Continue with Google
+            </button>
+
+            <p class="signup">
+                Don't have an account?
+                <a href="createacc.html">Create Account</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script>
+        async function login(event) {
+
+            event.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const result = document.getElementById("result");
+
+            // Empty fields
+            if (email === "" && password === "") {
+                result.innerText = "Please fill in your email and password";
+                return;
+            }
+
+            if (email === "") {
+                result.innerText = "Please enter your email";
+                return;
+            }
+
+            if (password === "") {
+                result.innerText = "Please enter your password";
+                return;
+            }
+
+            try {
+
+                console.log("Sending login request...");
+
+                const response = await fetch(
+                    "http://127.0.0.1:8000/login",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            email: email,
+                            password: password
+                        })
+                    }
+                );
+
+                console.log("Status:", response.status);
+
+                const data = await response.json();
+
+                console.log("Full response:", data);
+                console.log("Response type:", typeof data);
+
+                if (Array.isArray(data)) {
+
+                    if (data.message === "Login Successful") {
+                        setTimeout(function () {
+                           window.location.href = "frontend.html";
+                        }, 1000);
+                    } else {
+                        console.log("LOGIN FAILED");
+                        result.innerText = data[0];
+                    }
+
+                }
+
+                // If FastAPI returns "Login Successful"
+                else if (typeof data === "string") {
+
+                    if (data.message === "Login Successful") {
+
+                        // console.log("LOGIN SUCCESS");
+
+                        setTimeout(function () {
+
+                            window.location.href = "frontend.html";
+
+                        }, 1000);
+
+                    } else {
+
+                        result.innerText = data;
+                    }
+
+                }
+
+                // If FastAPI returns {"message": "Login Successful"}
+                else if (data.message) {
+
+                    if (data.message === "Login Successful") {
+
+                        localStorage.setItem("username", data.username);
+
+                        setTimeout(function () {
+
+                            window.location.href = "frontend.html";
+
+                        }, 1000);
+
+                    }
+                    else {
+
+                        result.innerText = data.message;
+                    }
+                }
+                
+
+                else {
+
+                    result.innerText = "Invalid server response";
+                }
+
+            } catch (error) {
+
+                console.error("ERROR:", error);
+
+                result.innerText = "Unable to connect to server";
+            }
+        }
+    </script>
+
+</body>
+</html>

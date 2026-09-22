@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Logout | AMFLIP</title>
+
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+    </div>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <div class="brand">
+
+                <div class="logo">AMFLIP</div>
+
+                <h1>Logout</h1>
+
+                <p>Are you sure you want to logout?</p>
+
+            </div>
+
+            <button class="login-btn" onclick="logout()">
+                Logout
+                <span>→</span>
+            </button>
+
+            <br><br>
+
+            <button class="login-btn" onclick="goBack()">
+                Cancel
+                <span>←</span>
+            </button>
+
+            <p id="result"></p>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function logout() {
+
+                localStorage.removeItem("username");
+
+                document.getElementById("result").innerText =
+                    "Logout successful";
+
+                setTimeout(function () {
+
+                    window.location.href = "frontend.html";
+
+                }, 1000);
+            }
+
+
+        function goBack() {
+
+            window.location.href = "frontend.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
