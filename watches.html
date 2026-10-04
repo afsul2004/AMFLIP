@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMFLIP - Online Shopping</title>
+    <link rel="stylesheet" href="./laptop.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <span>AM</span>FLIP
+            <small>Explore <b>Plus</b> ✦</small>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button>🔍</button>
+        </div>
+
+        <div class="header-links">
+            <a href="loginpage.html" id="loginUser">Login</a>
+            <a href="#">Become a Seller</a>
+            <a href="#">More ▾</a>
+            <div class="cart" onclick="window.location.href='cart.html'">
+                🛒<span id="cartCount" class="cart-count">0</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- CATEGORY SECTION -->
+    <section class="categories">
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./frontend.html">🏠</a>
+            </div>
+            <p>Home</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./mobile.html">📱</a>
+            </div>
+            <p>Mobiles</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./laptop.html">💻</a>
+            </div>
+            <p>Electronics</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./fashion.html">👕</a>
+            </div>
+            <p>Fashion</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./tv&app.html">📺</a>
+            </div>
+            <p>TV & Appliances</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./furniture,homepp.html">🛋️</a>
+            </div>
+            <p>Furniture & Appliances</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./grocery.html">🛒</a>
+            </div>
+            <p>Grocery</p>
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            <h2>Deals of the Day</h2>
+        </div>
+
+        <div class="products">
+
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukmini1.flixcart.com/image/1500/1500/xif0q/smartwatch/e/a/y/-original-imahftggye6eyhzw.jpeg?q=70"
+                    alt="">
+                <h3>Smart Watch</h3>
+                <p class="rating">★ 4.3</p>
+                <p class="price">
+                    ₹33,999
+                    <del>₹43,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Smart Watch',
+                        33999,
+                        'https://rukmini1.flixcart.com/image/1500/1500/xif0q/smartwatch/e/a/y/-original-imahftggye6eyhzw.jpeg?q=70',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim1.flixcart.com/image/3068/3068/xif0q/watch/v/z/m/-original-imahg62gbaztyvhf.jpeg?q=90"
+                    alt="">
+
+                <h3>Titan Stellar Analog Watch - For Men 10008TL01 </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹56,999
+                    <del>₹65,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Titan Stellar Analog Watch  - For Men 10008TL01 ',
+                        56999,
+                        'https://rukminim1.flixcart.com/image/3068/3068/xif0q/watch/v/z/m/-original-imahg62gbaztyvhf.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/watch/8/t/6/stylish-luxury-trendy-premium-party-wear-longbo-men-original-imah8fqm7sf2z5vf.jpeg?q=80"
+                    alt="">
+
+                <h3>Zenith Diamond Business Stainless Steel Watches </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹4,556
+                    <del>₹6,556</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'Zenith Diamond Business Stainless Steel Watches',
+                                    4556,
+                                    'https://rukminim3.flixcart.com/image/480/640/xif0q/watch/8/t/6/stylish-luxury-trendy-premium-party-wear-longbo-men-original-imah8fqm7sf2z5vf.jpeg?q=80',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/watch/u/k/r/1-1-octamex-men-resized-original-imahktcaj9dfhghd.jpeg?q=90"
+                    alt="">
+
+                <h3>octamex analog watch men</h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹1,999
+                    <del>₹2,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'octamex analog watch men',
+                        1999,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/watch/u/k/r/1-1-octamex-men-resized-original-imahktcaj9dfhghd.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/watch/q/y/9/1-ls3225-limestone-men-original-imahgde63dy5zkjf.jpeg?q=80"
+                    alt="">
+
+                <h3>Day and Date Functioning Metal Strap Quartz Analog Watch</h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹2,999
+                    <del>₹4,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Day and Date Functioning Metal Strap Quartz Analog Watch',
+                        2999,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/watch/q/y/9/1-ls3225-limestone-men-original-imahgde63dy5zkjf.jpeg?q=80',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukmini1.flixcart.com/image/1500/1500/xif0q/watch/p/h/2/1-cgc-01-abecommerce-women-original-imahh5789dv2rb3h.jpeg?q=70"
+                    alt="">
+
+                <h3>Analog Watch - For Women CGC-01</h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹2,399
+                    <del>₹4,399</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Analog Watch - For Women CGC-01',
+                        1399,
+                        'https://rukmini1.flixcart.com/image/1500/1500/xif0q/watch/p/h/2/1-cgc-01-abecommerce-women-original-imahh5789dv2rb3h.jpeg?q=70',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim1.flixcart.com/image/3068/3068/kq43iq80/watch/b/c/a/pink-adic-blutech-original-imaft4fejzvuyhvh.jpeg?q=90"
+                    alt="">
+
+                <h3>PEPPER STYLE Exclusive Rose Gold Bracelet Chain Watch For Women </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹1,499
+                    <del>₹2,499</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'PEPPER STYLE Exclusive Rose Gold Bracelet Chain Watch For Women',
+                                    1499,
+                                    'https://rukminim1.flixcart.com/image/3068/3068/kq43iq80/watch/b/c/a/pink-adic-blutech-original-imaft4fejzvuyhvh.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+
+
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim1.flixcart.com/image/3068/3068/xif0q/watch/m/r/t/1-bm1007-05-bruno-milano-women-original-imahef9tmvthqky7.jpeg?q=90"
+                    alt="">
+
+                <h3>Bruno Milano Analog Watch - For Women </h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹2,399
+                    <del>₹3,399</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Bruno Milano Analog Watch  - For Women',
+                        2399,
+                        'https://rukminim1.flixcart.com/image/3068/3068/xif0q/watch/m/r/t/1-bm1007-05-bruno-milano-women-original-imahef9tmvthqky7.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim1.flixcart.com/image/3068/3068/xif0q/watch/j/i/2/3-csd-809blk-806pur-803pink-casado-women-resized-original-imagn9pmzmayjzme.jpeg?q=90"
+                    alt="">
+
+                <h3>Casado Pair of 3 Sophisticated Wrist Watches Analog Watch - For Women </h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹1,459
+                    <del>₹2,459</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Casado Pair of 3 Sophisticated Wrist Watches Analog Watch  - For Women',
+                        1459,
+                        'https://rukminim1.flixcart.com/image/3068/3068/xif0q/watch/j/i/2/3-csd-809blk-806pur-803pink-casado-women-resized-original-imagn9pmzmayjzme.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim1.flixcart.com/image/3068/3068/xif0q/watch/p/0/n/-original-imahfwzhfaaz9ayh.jpeg?q=90"
+                    alt="">
+
+                <h3>MAXIMA Elite Analog Watch - For Women</h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹1,399
+                    <del>₹2,399</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'MAXIMA Elite Analog Watch  - For Women ',
+                        1,399,
+                        'https://rukminim1.flixcart.com/image/3068/3068/xif0q/watch/p/0/n/-original-imahfwzhfaaz9ayh.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        const loginUser = document.getElementById("loginUser");
+        const username = localStorage.getItem("username");
+        if (username) {
+            loginUser.innerText = username;
+            loginUser.href = "logoutpage.html";
+        } else {
+
+            loginUser.innerText = "Login";
+            loginUser.href = "loginpage.html";
+
+        }
+
+        //cart to add the product....
+
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existingProduct = cart.find(product => product.name === name);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            function addToCart(product) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existingProduct = cart.find(
+                    item => item.name === product.name
+                );
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    product.quantity = 1;
+                    cart.push(product);
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+            }
+            // window.location.href = "cart.html";
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(
+                localStorage.getItem("cart")
+            ) || [];
+            let totalItems = 0;
+            cart.forEach(product => {
+                totalItems += Number(product.quantity) || 1;
+            });
+            const cartCount = document.getElementById("cartCount");
+            if (cartCount) {
+                cartCount.innerText = totalItems;
+            }
+        }
+        // Update when page loads
+        updateCartCount();
+
+
+
+    </script>
+</body>
+
+</html>

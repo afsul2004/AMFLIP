@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Logout | AMFLIP</title>
+
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+    </div>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <div class="brand">
+
+                <div class="logo">AMFLIP</div>
+
+                <h1>Logout</h1>
+
+                <p>Are you sure you want to logout?</p>
+
+            </div>
+
+            <button class="login-btn" onclick="logout()">
+                Logout
+                <span>→</span>
+            </button>
+
+            <br><br>
+
+            <button class="login-btn" onclick="deleteAccount()">
+                Delete account 
+                <span>→</span>
+            </button>
+
+            <br><br>
+
+            <button class="login-btn" onclick="goBack()">
+                Cancel
+                <span>←</span>
+            </button>
+
+            <p id="result"></p>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function logout() {
+
+                localStorage.removeItem("username");
+                localStorage.removeItem("cart");
+
+                document.getElementById("result").innerText =
+                    "Logout successful";
+
+                setTimeout(function () {
+ 
+                    window.location.href = "frontend.html";
+
+                }, 1000);
+            }
+
+        async function deleteAccount() {
+
+                const username = localStorage.getItem("username");
+
+                if (!username) {
+                    alert("Username not found. Please login again.");
+                    return;
+                }
+
+                // Ask user for password
+                const password = prompt(
+                    "Enter your password to delete your account:"
+                );
+
+                if (!password) {
+                    return;
+                }
+
+                try {
+
+                    const response = await fetch(
+                        "http://127.0.0.1:8000/delete-account",
+                        {
+                            method: "DELETE",
+
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify({
+                                username: username,
+                                password: password
+                            })
+                        }
+                    );
+
+                    const data = await response.json();
+
+                    console.log("Status:", response.status);
+                    console.log("Response:", data);
+
+                    alert(data.message);
+
+                    if (data.message === "Account deleted successfully") {
+
+                        // Remove login information
+                        localStorage.clear();
+                        localStorage.removeItem("cart");
+
+                        // Go to login page
+                        window.location.href = "loginpage.html";
+                    }
+
+                } catch (error) {
+
+                    console.error("Delete error:", error);
+
+                    alert("Something went wrong");
+                }
+            }
+            
+
+        function goBack() {
+
+            window.location.href = "frontend.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

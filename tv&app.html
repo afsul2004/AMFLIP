@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMFLIP - Online Shopping</title>
+    <link rel="stylesheet" href="./tv&app.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <span>AM</span>FLIP
+            <small>Explore <b>Plus</b> ✦</small>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button>🔍</button>
+        </div>
+
+        <div class="header-links">
+            <a href="loginpage.html" id="loginUser">Login</a>
+            <a href="#">Become a Seller</a>
+            <a href="#">More ▾</a>
+            <div class="cart" onclick="window.location.href='cart.html'">
+                🛒<span id="cartCount" class="cart-count">0</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- CATEGORY SECTION -->
+    <section class="categories">
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./frontend.html">🏠</a>
+            </div>
+            <p>Home</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./mobile.html">📱</a>
+            </div>
+            <p>Mobiles</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./laptop.html">💻</a>
+            </div>
+            <p>Electronics</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./fashion.html">👕</a>
+            </div>
+            <p>Fashion</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./tv&app.html">📺</a>
+            </div>
+            <p>TV & Appliances</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./furniture,homepp.html">🛋️</a>
+            </div>
+            <p>Furniture & Appliances</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./grocery.html">🛒</a>
+            </div>
+            <p>Grocery</p>
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            <h2>Deals of the Day</h2>
+        </div>
+
+        <div class="products">
+
+            <!-- 20 TV products using Flipkart CDN product images -->
+
+            <!-- TV PRODUCT 1 -->
+            <div class="product-card">
+                <div class="discount">47% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/x/o/t/-resized-original-imahmkyzzbv3guey.jpeg?q=20"
+                    alt="TCL P6L 55 inch 4K LED Smart Google TV">
+                <h3>TCL P6L 55 inch 4K LED Smart Google TV</h3>
+                <p class="rating">★ 4.4</p>
+                <p class="price">
+                    ₹39,100
+                    <del>₹74,990</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'TCL P6L 55 inch 4K LED Smart Google TV',
+                    39100,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/x/o/t/-resized-original-imahmkyzzbv3guey.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 2 -->
+            <div class="product-card">
+                <div class="discount">42% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/h/n/z/-resized-original-imahmzdnzwpyeput.jpeg?q=20"
+                    alt="TCL T6D 55 inch QLED 4K Smart Google TV">
+                <h3>TCL T6D 55 inch QLED 4K Smart Google TV</h3>
+                <p class="rating">★ 4.2</p>
+                <p class="price">
+                    ₹43,990
+                    <del>₹76,990</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'TCL T6D 55 inch QLED 4K Smart Google TV',
+                    43990,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/h/n/z/-resized-original-imahmzdnzwpyeput.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 3 -->
+            <div class="product-card">
+                <div class="discount">36% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/p/z/n/-resized-original-imahjf6zasb3mm9e.jpeg?q=20"
+                    alt="Hisense 55E75Q 55 inch QLED 4K Smart TV">
+                <h3>Hisense 55E75Q 55 inch QLED 4K Smart TV</h3>
+                <p class="rating">★ 4.1</p>
+                <p class="price">
+                    ₹39,990
+                    <del>₹62,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Hisense 55E75Q 55 inch QLED 4K Smart TV',
+                    39990,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/p/z/n/-resized-original-imahjf6zasb3mm9e.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 4 -->
+            <div class="product-card">
+                <div class="discount">66% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/t/6/1/-resized-original-imahhxggzchbd72z.jpeg?q=20"
+                    alt="Foxsky 43 inch Full HD LED Smart Android TV">
+                <h3>Foxsky 43 inch Full HD LED Smart Android TV</h3>
+                <p class="rating">★ 4.1</p>
+                <p class="price">
+                    ₹13,699
+                    <del>₹41,499</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Foxsky 43 inch Full HD LED Smart Android TV',
+                    13699,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/t/6/1/-resized-original-imahhxggzchbd72z.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 5 -->
+            <div class="product-card">
+                <div class="discount">41% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/m/6/p/-resized-original-imahkqyfu7k7w9wf.jpeg?q=20"
+                    alt="XIAOMI X Pro Series 75 inch QLED 4K Smart Google TV">
+                <h3>XIAOMI X Pro Series 75 inch QLED 4K Smart Google TV</h3>
+                <p class="rating">★ 4.1</p>
+                <p class="price">
+                    ₹69,999
+                    <del>₹119,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'XIAOMI X Pro Series 75 inch QLED 4K Smart Google TV',
+                    69999,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/m/6/p/-resized-original-imahkqyfu7k7w9wf.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 6 -->
+            <div class="product-card">
+                <div class="discount">36% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/i/i/r/-resized-original-imah9m2zuh9bt7hd.jpeg?q=20"
+                    alt="Infinix Y-Series 40 inch QLED Full HD Smart TV">
+                <h3>Infinix Y-Series 40 inch QLED Full HD Smart TV</h3>
+                <p class="rating">★ 4.0</p>
+                <p class="price">
+                    ₹13,999
+                    <del>₹21,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Infinix Y-Series 40 inch QLED Full HD Smart TV',
+                    13999,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/i/i/r/-resized-original-imah9m2zuh9bt7hd.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 7 -->
+            <div class="product-card">
+                <div class="discount">72% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/7/m/f/-resized-original-imahhxggfhcvwat6.jpeg?q=20"
+                    alt="Foxsky 55 inch QLED 4K Smart Google TV">
+                <h3>Foxsky 55 inch QLED 4K Smart Google TV</h3>
+                <p class="rating">★ 4.1</p>
+                <p class="price">
+                    ₹26,999
+                    <del>₹98,990</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Foxsky 55 inch QLED 4K Smart Google TV',
+                    26999,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/7/m/f/-resized-original-imahhxggfhcvwat6.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 8 -->
+            <div class="product-card">
+                <div class="discount">40% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/d/m/z/-original-imahrcytwszkqmgc.jpeg?q=20"
+                    alt="TOSHIBA V37SP 50 inch QLED Full HD Smart VIDAA TV">
+                <h3>TOSHIBA V37SP 50 inch QLED Full HD Smart VIDAA TV</h3>
+                <p class="rating">★ 4.9</p>
+                <p class="price">
+                    ₹29,999
+                    <del>₹49,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'TOSHIBA V37SP 50 inch QLED Full HD Smart VIDAA TV',
+                    29999,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/d/m/z/-original-imahrcytwszkqmgc.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 9 -->
+            <div class="product-card">
+                <div class="discount">41% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/g/t/c/-resized-original-imahdq2ws9gzgmdf.jpeg?q=20"
+                    alt="Coocaa Y74 Pro 43 inch QLED 4K Smart Google TV">
+                <h3>Coocaa Y74 Pro 43 inch QLED 4K Smart Google TV</h3>
+                <p class="rating">★ 4.2</p>
+                <p class="price">
+                    ₹20,999
+                    <del>₹35,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Coocaa Y74 Pro 43 inch QLED 4K Smart Google TV',
+                    20999,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/g/t/c/-resized-original-imahdq2ws9gzgmdf.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 10 -->
+            <div class="product-card">
+                <div class="discount">38% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/9/k/c/-resized-original-imahp9nyvwqm6f8h.jpeg?q=20"
+                    alt="TCL S5K 50 inch QLED Full HD Smart Google TV">
+                <h3>TCL S5K 50 inch QLED Full HD Smart Google TV</h3>
+                <p class="rating">★ 4.2</p>
+                <p class="price">
+                    ₹33,390
+                    <del>₹53,990</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'TCL S5K 50 inch QLED Full HD Smart Google TV',
+                    33390,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/9/k/c/-resized-original-imahp9nyvwqm6f8h.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 11 -->
+            <div class="product-card">
+                <div class="discount">38% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/b/j/v/-resized-original-imahgs5xhecgvehn.jpeg?q=20"
+                    alt="VW OptimaX 40 inch QLED Full HD Smart Android TV">
+                <h3>VW OptimaX 40 inch QLED Full HD Smart Android TV</h3>
+                <p class="rating">★ 4.2</p>
+                <p class="price">
+                    ₹12,999
+                    <del>₹20,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'VW OptimaX 40 inch QLED Full HD Smart Android TV',
+                    12999,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/b/j/v/-resized-original-imahgs5xhecgvehn.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 12 -->
+            <div class="product-card">
+                <div class="discount">38% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/b/t/y/-resized-original-imahjph4xqhgvzv7.jpeg?q=20"
+                    alt="XIAOMI FX Pro 43 inch QLED 4K Smart Fire TV">
+                <h3>XIAOMI FX Pro 43 inch QLED 4K Smart Fire TV</h3>
+                <p class="rating">★ 4.1</p>
+                <p class="price">
+                    ₹27,499
+                    <del>₹44,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'XIAOMI FX Pro 43 inch QLED 4K Smart Fire TV',
+                    27499,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/b/t/y/-resized-original-imahjph4xqhgvzv7.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 13 -->
+            <div class="product-card">
+                <div class="discount">49% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/d/c/v/-original-imahrcytkafxzsrz.jpeg?q=20"
+                    alt="Hisense E75Q 75 inch QLED 4K Smart VIDAA TV">
+                <h3>Hisense E75Q 75 inch QLED 4K Smart VIDAA TV</h3>
+                <p class="rating">★ 4.1</p>
+                <p class="price">
+                    ₹64,249
+                    <del>₹125,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Hisense E75Q 75 inch QLED 4K Smart VIDAA TV',
+                    64249,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/d/c/v/-original-imahrcytkafxzsrz.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 14 -->
+            <div class="product-card">
+                <div class="discount">60% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/j/u/n/-resized-original-imahhxggmkfdrp6n.jpeg?q=20"
+                    alt="Foxsky 32 inch HD Ready LED Smart Android TV">
+                <h3>Foxsky 32 inch HD Ready LED Smart Android TV</h3>
+                <p class="rating">★ 4.1</p>
+                <p class="price">
+                    ₹8,999
+                    <del>₹22,499</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Foxsky 32 inch HD Ready LED Smart Android TV',
+                    8999,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/j/u/n/-resized-original-imahhxggmkfdrp6n.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 15 -->
+            <div class="product-card">
+                <div class="discount">12% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/d/j/9/-original-imahz2f7m2995uqr.jpeg?q=20"
+                    alt="Samsung Crystal 4K Vision AI 43 inch Smart Tizen TV">
+                <h3>Samsung Crystal 4K Vision AI 43 inch Smart Tizen TV</h3>
+                <p class="rating">★ 4.3</p>
+                <p class="price">
+                    ₹34,990
+                    <del>₹39,900</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Samsung Crystal 4K Vision AI 43 inch Smart Tizen TV',
+                    34990,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/d/j/9/-original-imahz2f7m2995uqr.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 16 -->
+            <div class="product-card">
+                <div class="discount">26% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/480/xif0q/television/9/4/h/43uq8040psb-lg-original-imagg7zc2ydhfceg.jpeg?q=20"
+                    alt="LG 43 inch Ultra HD 4K LED Smart WebOS TV">
+                <h3>LG 43 inch Ultra HD 4K LED Smart WebOS TV</h3>
+                <p class="rating">★ 4.3</p>
+                <p class="price">
+                    ₹33,990
+                    <del>₹45,990</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'LG 43 inch Ultra HD 4K LED Smart WebOS TV',
+                    33990,
+                    'https://rukminim2.flixcart.com/image/480/480/xif0q/television/9/4/h/43uq8040psb-lg-original-imagg7zc2ydhfceg.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 17 -->
+            <div class="product-card">
+                <div class="discount">9% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/n/d/e/-resized-original-imahcsfhfmxa5kwk.jpeg?q=20"
+                    alt="Sony BRAVIA 2 II 43 inch 4K LED Smart Google TV">
+                <h3>Sony BRAVIA 2 II 43 inch 4K LED Smart Google TV</h3>
+                <p class="rating">★ 4.7</p>
+                <p class="price">
+                    ₹49,990
+                    <del>₹54,900</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Sony BRAVIA 2 II 43 inch 4K LED Smart Google TV',
+                    49990,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/n/d/e/-resized-original-imahcsfhfmxa5kwk.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 18 -->
+            <div class="product-card">
+                <div class="discount">5% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/480/xif0q/television/v/2/b/-original-imaggjzuhzv6zhby.jpeg?q=20"
+                    alt="Vu Premium 43 inch 4K LED Smart Android TV">
+                <h3>Vu Premium 43 inch 4K LED Smart Android TV</h3>
+                <p class="rating">★ 4.4</p>
+                <p class="price">
+                    ₹38,000
+                    <del>₹40,000</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Vu Premium 43 inch 4K LED Smart Android TV',
+                    38000,
+                    'https://rukminim2.flixcart.com/image/480/480/xif0q/television/v/2/b/-original-imaggjzuhzv6zhby.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 19 -->
+            <div class="product-card">
+                <div class="discount">42% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/t/z/t/43s5k-tcl-resized-original-imahf9qydzztzkfg.jpeg?q=20"
+                    alt="TCL 43 inch QLED Full HD Smart Google TV">
+                <h3>TCL 43 inch QLED Full HD Smart Google TV</h3>
+                <p class="rating">★ 4.2</p>
+                <p class="price">
+                    ₹26,450
+                    <del>₹45,990</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'TCL 43 inch QLED Full HD Smart Google TV',
+                    26450,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/t/z/t/43s5k-tcl-resized-original-imahf9qydzztzkfg.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <!-- TV PRODUCT 20 -->
+            <div class="product-card">
+                <div class="discount">34% OFF</div>
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/television/p/n/p/-resized-original-imahjph4qhhmxh2t.jpeg?q=20"
+                    alt="XIAOMI F Series 43 inch 4K LED Smart Fire TV">
+                <h3>XIAOMI F Series 43 inch 4K LED Smart Fire TV</h3>
+                <p class="rating">★ 4.3</p>
+                <p class="price">
+                    ₹24,999
+                    <del>₹37,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'XIAOMI F Series 43 inch 4K LED Smart Fire TV',
+                    24999,
+                    'https://rukminim2.flixcart.com/image/480/640/xif0q/television/p/n/p/-resized-original-imahjph4qhhmxh2t.jpeg?q=20',
+                    'Extra ₹1,000 off'
+                )">
+                    🛒 Cart
+                </button>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <script>
+        const loginUser = document.getElementById("loginUser");
+        const username = localStorage.getItem("username");
+        if (username) {
+            loginUser.innerText = username;
+            loginUser.href = "logoutpage.html";
+        } else {
+
+            loginUser.innerText = "Login";
+            loginUser.href = "loginpage.html";
+
+        }
+
+        //cart to add the product....
+
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existingProduct = cart.find(product => product.name === name);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            function addToCart(product) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existingProduct = cart.find(
+                    item => item.name === product.name
+                );
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    product.quantity = 1;
+                    cart.push(product);
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+            }
+            // window.location.href = "cart.html";
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(
+                localStorage.getItem("cart")
+            ) || [];
+            let totalItems = 0;
+            cart.forEach(product => {
+                totalItems += Number(product.quantity) || 1;
+            });
+            const cartCount = document.getElementById("cartCount");
+            if (cartCount) {
+                cartCount.innerText = totalItems;
+            }
+        }
+        // Update when page loads
+        updateCartCount();
+
+
+
+    </script>
+</body>
+
+</html>

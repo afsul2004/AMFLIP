@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMFLIP - Online Shopping</title>
+    <link rel="stylesheet" href="./laptop.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <span>AM</span>FLIP
+            <small>Explore <b>Plus</b> ✦</small>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button>🔍</button>
+        </div>
+
+        <div class="header-links">
+            <a href="loginpage.html" id="loginUser">Login</a>
+            <a href="#">Become a Seller</a>
+            <a href="#">More ▾</a>
+            <div class="cart" onclick="window.location.href='cart.html'">
+                🛒<span id="cartCount" class="cart-count">0</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- CATEGORY SECTION -->
+    <section class="categories">
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./frontend.html">🏠</a>
+            </div>
+            <p>Home</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./mobile.html">📱</a>
+            </div>
+            <p>Mobiles</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./laptop.html">💻</a>
+            </div>
+            <p>Electronics</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./fashion.html">👕</a>
+            </div>
+            <p>Fashion</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./tv&app.html">📺</a>
+            </div>
+            <p>TV & Appliances</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./furniture,homepp.html">🛋️</a>
+            </div>
+            <p>Furniture & Appliances</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./grocery.html">🛒</a>
+            </div>
+            <p>Grocery</p>
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            <h2>Deals of the Day</h2>
+        </div>
+
+        <div class="products">
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/headphone/v/g/z/mgyj3hn-a-apple-enriched-transparent-original-imafy8whg2wxcygt.png?q=20"
+                    alt="">
+
+                <h3>Wireless Headphones</h3>
+                
+                <p class="rating">★ 4.6</p>
+                
+                <p class="price">
+                    ₹52,499
+                    <del>₹59,499</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+
+                <button class="add-cart" onclick="addToCart(
+                        'Wireless Headphones',
+                        52499,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/headphone/v/g/z/mgyj3hn-a-apple-enriched-transparent-original-imafy8whg2wxcygt.png?q=20'
+                    )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/headphone/h/k/u/wireless-over-ear-headphones-with-hi-fi-bass-mic-multicolor-original-imahhytyffgeuc8s.jpeg?q=90"
+                    alt="">
+
+                <h3>Amusing Wireless Headphones </h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹5,999
+                    <del>₹6,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Amusing Wireless Headphones',
+                        5999,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/headphone/h/k/u/wireless-over-ear-headphones-with-hi-fi-bass-mic-multicolor-original-imahhytyffgeuc8s.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/headphone/u/n/u/dj-m3-wireless-headphone-with-mic-15min-charge-for-10hrs-music-original-imahman9ezhnjcze.jpeg?q=90"
+                    alt="">
+
+                <h3>DJ-M3 Wireless Headphone </h3>
+
+                <p class="rating">★ 4.8</p>
+
+                <p class="price">
+                    ₹1,609
+                    <del>₹2,609</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'DJ-M3 Wireless Headphone',
+                        1609,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/headphone/u/n/u/dj-m3-wireless-headphone-with-mic-15min-charge-for-10hrs-music-original-imahman9ezhnjcze.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/260/260/xif0q/headphone/8/6/c/-enriched-transparent-original-imahknzeap2pxbhq.png?q=80&crop=false"
+                    alt="">
+
+                <h3>Punkheadz Z4 with 50H Headphone </h3>
+
+                <p class="rating">★ 4.7</p>
+
+                <p class="price">
+                    ₹3,999
+                    <del>₹4,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Punkheadz Z4 with 50H Headphone',
+                        3999,
+                        'https://rukminim2.flixcart.com/image/260/260/xif0q/headphone/8/6/c/-enriched-transparent-original-imahknzeap2pxbhq.png?q=80&crop=false',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/260/260/xif0q/headphone/a/n/q/-enriched-transparent-original-imahhg2fmx5xg6ht.png?q=80&crop=false"
+                    alt="">
+
+                <h3>TRIGGR Zion 1 Bluetooth Headset </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹1,999
+                    <del>₹2,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'TRIGGR Zion 1 Bluetooth Headset',
+                        1999,
+                        'https://rukminim3.flixcart.com/image/260/260/xif0q/headphone/a/n/q/-enriched-transparent-original-imahhg2fmx5xg6ht.png?q=80&crop=false',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/shopsy-headphone/a/b/q/bluetooth-yes-enmora-p47-wireless-bluetooth-on-ear-headphone-original-imah2fuzzwcad6zs.jpeg?q=80"
+                    alt="">
+
+                <h3>4uonly SPORTS p-47 HEADPHONE Bluetooth </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹2,999
+                    <del>₹3,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        '4uonly SPORTS p-47 HEADPHONE Bluetooth ',
+                        2999,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/shopsy-headphone/a/b/q/bluetooth-yes-enmora-p47-wireless-bluetooth-on-ear-headphone-original-imah2fuzzwcad6zs.jpeg?q=80',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukmini1.flixcart.com/image/1500/1500/xif0q/headphone/c/2/d/-original-imahafrzuterwrbk.jpeg?q=70"
+                    alt="">
+
+                <h3>TRIGGR Trinity 2 with Dual Pairing Headphone</h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹4,999
+                    <del>₹5,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'TRIGGR Trinity 2 with Dual Pairing Headphone',
+                        4999,
+                        'https://rukmini1.flixcart.com/image/1500/1500/xif0q/headphone/c/2/d/-original-imahafrzuterwrbk.jpeg?q=70',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/480/xif0q/headphone/3/b/c/-original-imahftffyzcx5ksy.jpeg?q=80"
+                    alt="">
+
+                <h3>Apple AirPods Pro 3 Bluetooth Headset </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹25,999
+                    <del>₹29,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Apple AirPods Pro 3 Bluetooth Headset',
+                        25999,
+                        'https://rukminim3.flixcart.com/image/480/480/xif0q/headphone/3/b/c/-original-imahftffyzcx5ksy.jpeg?q=80',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+            
+                <div class="discount">20% OFF</div>
+            
+                <img src="https://rukminim2.flixcart.com/image/360/432/xif0q/headphone/d/b/h/-original-imaha6btcgqdqy5e.jpeg?q=80&crop=false"
+                    alt="">
+            
+                <h3>realme Buds T200 Lite</h3>
+            
+                <p class="rating">★ 4.9</p>
+            
+                <p class="price">
+                    ₹2,435
+                    <del>₹3,435</del>
+                </p>
+            
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'realme Buds T200 Lite',
+                                    2435,
+                                    'https://rukminim2.flixcart.com/image/360/432/xif0q/headphone/d/b/h/-original-imaha6btcgqdqy5e.jpeg?q=80&crop=false',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+            
+            
+            </div>
+
+            <div class="product-card">
+            
+                <div class="discount">20% OFF</div>
+            
+                <img src="https://rukmini1.flixcart.com/image/300/300/xif0q/headphone/f/x/c/wireless-bluetooth-earbuds-without-case-lightweight-stylish-original-imahgdda9z97k8mh.jpeg"
+                    alt="">
+            
+                <h3>DROSEAK Wireless Bluetooth Earbuds </h3>
+            
+                <p class="rating">★ 4.9</p>
+            
+                <p class="price">
+                    ₹1,999
+                    <del>₹2,999</del>
+                </p>
+            
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'DROSEAK Wireless Bluetooth Earbuds ',
+                                    1999,
+                                    'https://rukmini1.flixcart.com/image/300/300/xif0q/headphone/f/x/c/wireless-bluetooth-earbuds-without-case-lightweight-stylish-original-imahgdda9z97k8mh.jpeg',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+            
+            
+            </div>
+
+        
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://m.media-amazon.com/images/I/61RrspGZ99L._AC_UF350,350_QL50_.jpg" alt="">
+                </a>
+                
+                <h3>Digital Camera</h3>
+                
+                <p class="rating">★ 4.7</p>
+                
+                <p class="price">
+                    ₹90,890
+                    <del>₹99,890</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Digital Camera',
+                        90890,
+                        'https://m.media-amazon.com/images/I/61RrspGZ99L._AC_UF350,350_QL50_.jpg',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+            </div>
+            <div class="product-card">
+            
+                <div class="discount">20% OFF</div>
+            
+                <img src="https://rukmini1.flixcart.com/image/1500/1500/kc3p30w0/dslr-camera/d/g/p/eos-eos-1500d-canon-original-imafta9rtu4wxj8h.jpeg?q=70"
+                    alt="">
+            
+                <h3>Canon EOS 1500D Body+ 18-55 mm IS II Lens</h3>
+            
+                <p class="rating">★ 4.6</p>
+            
+                <p class="price">
+                    ₹41,299
+                    <del>₹51,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'Canon EOS 1500D Body+ 18-55 mm IS II Lens',
+                                    41299,
+                                    'https://rukmini1.flixcart.com/image/1500/1500/kc3p30w0/dslr-camera/d/g/p/eos-eos-1500d-canon-original-imafta9rtu4wxj8h.jpeg?q=70',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+            
+            </div>
+
+            <div class="product-card">
+            
+                <div class="discount">20% OFF</div>
+            
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/sports-action-camera/f/b/a/osmo-pocket-3-osmo-2-64-pocket-3-dji-original-imaguzhfz5z4xphr.jpeg?q=90"
+                    alt="">
+            
+                <h3>dji Osmo Pocket 3 Sports and Action Camera (Black, 64 MP) </h3>
+            
+                <p class="rating">★ 4.6</p>
+            
+                <p class="price">
+                    ₹35,990
+                    <del>₹45,990</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'dji Osmo Pocket 3 Sports and Action Camera (Black, 64 MP)',
+                                    35990,
+                                    'https://rukminim3.flixcart.com/image/480/640/xif0q/sports-action-camera/f/b/a/osmo-pocket-3-osmo-2-64-pocket-3-dji-original-imaguzhfz5z4xphr.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+            
+            </div>
+
+            <div class="product-card">
+            
+                <div class="discount">20% OFF</div>
+            
+                <img src="https://rukminim3.flixcart.com/image/480/640/jmkwya80/sports-action-camera/z/z/8/1080-ultra-hd-action-camera-1080p-1080p-callie-original-imaf9f86chjsszmr.jpeg?q=20"
+                    alt="">
+            
+                <h3>CALLIE 1080P 1080 ULTRA HD ACTION CAMERA Sports and Action Camera</h3>
+            
+                <p class="rating">★ 4.6</p>
+            
+                <p class="price">
+                    ₹22,999
+                    <del>₹32,999</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'CALLIE 1080P 1080 ULTRA HD ACTION CAMERA Sports and Action Camera',
+                                    22999,
+                                    'https://rukminim3.flixcart.com/image/480/640/jmkwya80/sports-action-camera/z/z/8/1080-ultra-hd-action-camera-1080p-1080p-callie-original-imaf9f86chjsszmr.jpeg?q=20',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+            
+            </div>
+
+            <div class="product-card">
+            
+                <div class="discount">20% OFF</div>
+            
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/instant-camera/v/b/i/diy-digital-camera-13-uph-50-kidzkollection-original-imahgb9fyaayqekg.jpeg?q=90"
+                    alt="">
+            
+                <h3>Kidzkollection 13 DIY Digital Camera Instant Camera (Pink) </h3>
+            
+                <p class="rating">★ 4.6</p>
+            
+                <p class="price">
+                    ₹4,045
+                    <del>₹5,045</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'Kidzkollection 13 DIY Digital Camera Instant Camera (Pink)',
+                                    4045,
+                                    'https://rukminim3.flixcart.com/image/480/640/xif0q/instant-camera/v/b/i/diy-digital-camera-13-uph-50-kidzkollection-original-imahgb9fyaayqekg.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+            
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <script>
+        const loginUser = document.getElementById("loginUser");
+        const username = localStorage.getItem("username");
+        if (username) {
+            loginUser.innerText = username;
+            loginUser.href = "logoutpage.html";
+        } else {
+
+            loginUser.innerText = "Login";
+            loginUser.href = "loginpage.html";
+
+        }
+
+        //cart to add the product....
+
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existingProduct = cart.find(product => product.name === name);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            function addToCart(product) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existingProduct = cart.find(
+                    item => item.name === product.name
+                );
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    product.quantity = 1;
+                    cart.push(product);
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+            }
+            // window.location.href = "cart.html";
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(
+                localStorage.getItem("cart")
+            ) || [];
+            let totalItems = 0;
+            cart.forEach(product => {
+                totalItems += Number(product.quantity) || 1;
+            });
+            const cartCount = document.getElementById("cartCount");
+            if (cartCount) {
+                cartCount.innerText = totalItems;
+            }
+        }
+        // Update when page loads
+        updateCartCount();
+
+
+
+    </script>
+</body>
+
+</html>

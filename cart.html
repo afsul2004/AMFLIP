@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AMFLIP - My Cart</title>
+
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <a href="frontend.html">
+                <span>AM</span>FLIP
+            </a>
+            <small>Explore <b>Plus</b> ✦</small>
+        </div>
+
+        <div class="cart-title">
+            🛒 My Cart
+        </div>
+
+        <div class="header-right">
+            <a href="frontend.html">Continue Shopping</a>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CART -->
+    <main class="cart-container">
+
+        <!-- CART PRODUCTS -->
+        <section class="cart-section">
+
+            <div class="cart-heading">
+                <h2>My Cart</h2>
+                <span id="cartCount">0 Items</span>
+            </div>
+
+
+            <!-- PRODUCTS WILL COME HERE -->
+            <div id="cartItems">
+
+                <!-- PRODUCT EXAMPLE -->
+                <div class="cart-item">
+
+                    <div class="product-image">
+                        <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/headphone/v/g/z/mgyj3hn-a-apple-enriched-transparent-original-imafy8whg2wxcygt.png?q=20"
+                            alt="Wireless Headphones">
+                    </div>
+
+                    <div class="product-details">
+
+                        <h3>Wireless Headphones</h3>
+
+                        <p class="product-info">
+                            Wireless Bluetooth Headphones
+                        </p>
+
+                        <p class="price">
+                            ₹52,499
+                        </p>
+
+                        <div class="quantity">
+
+                            <button onclick="decreaseQuantity()">−</button>
+
+                            <span id="quantity">1</span>
+
+                            <button onclick="increaseQuantity()">+</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cart-actions">
+
+                        <p class="total-price">
+                            ₹52,499
+                        </p>
+
+                        <button class="remove-btn" onclick="removeProduct()">
+                            🗑 Remove
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMPTY CART -->
+            <div id="emptyCart" class="empty-cart">
+
+                <div class="empty-icon">🛒</div>
+
+                <h2>Your Cart is Empty</h2>
+
+                <p>Add some products to your cart and they will appear here.</p>
+
+                <a href="frontend.html">
+                    <button>SHOP NOW</button>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRICE SUMMARY -->
+        <aside class="price-summary">
+
+            <h2>PRICE DETAILS</h2>
+
+            <div class="summary-line">
+                <span>Price</span>
+                <span id="subtotal">₹52,499</span>
+            </div>
+
+            <div class="summary-line">
+                <span>Delivery</span>
+                <span class="free">FREE</span>
+            </div>
+
+            <div class="summary-line">
+                <span>Discount</span>
+                <span class="discount">− ₹1,000</span>
+            </div>
+
+            <hr>
+
+            <div class="total-line">
+                <strong>Total Amount</strong>
+                <strong id="totalAmount">₹51,499</strong>
+            </div>
+
+            <p class="savings">
+                🎉 You will save ₹1,000 on this order
+            </p>
+
+            <button class="order-btn" onclick="goToPlaceOrder()">
+                PLACE ORDER
+            </button>
+
+
+        </aside>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-column">
+
+            <h3>ABOUT AMFLIP</h3>
+
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Corporate Information</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>HELP</h3>
+
+            <a href="#">Payments</a>
+            <a href="#">Shipping</a>
+            <a href="#">Cancellation</a>
+            <a href="#">FAQ</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>CONSUMER POLICY</h3>
+
+            <a href="#">Return Policy</a>
+            <a href="#">Terms Of Use</a>
+            <a href="#">Privacy</a>
+            <a href="#">Security</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>SOCIAL</h3>
+
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 AMFLIP. All Rights Reserved.
+        </div>
+
+    </footer>
+
+    <script>
+    // ==============================
+    // LOAD CART FROM LOCAL STORAGE
+    // ==============================
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+    // ==============================
+    // DISPLAY CART
+    // ==============================
+
+    function displayCart() {
+
+        const cartItems = document.getElementById("cartItems");
+        const emptyCart = document.getElementById("emptyCart");
+        const cartCount = document.getElementById("cartCount");
+
+        // Clear existing products
+        cartItems.innerHTML = "";
+
+        // ==============================
+        // EMPTY CART
+        // ==============================
+
+        if (cart.length === 0) {
+
+            emptyCart.style.display = "block";
+
+            cartCount.innerText = "0 Items";
+
+            updateTotal();
+
+            return;
+        }
+
+        emptyCart.style.display = "none";
+
+
+        // ==============================
+        // DISPLAY PRODUCTS
+        // ==============================
+
+        let totalItems = 0;
+
+        cart.forEach((product, index) => {
+
+            // Make sure quantity exists
+            if (!product.quantity || product.quantity < 1) {
+                product.quantity = 1;
+            }
+
+            totalItems += product.quantity;
+
+
+            const item = document.createElement("div");
+
+            item.className = "cart-item";
+
+
+            item.innerHTML = `
+
+                <div class="product-image">
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                    >
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>${product.name}</h3>
+
+                    <p class="product-info">
+                        ${product.description || "Product"}
+                    </p>
+
+                    <p class="price">
+                        ₹${Number(product.price).toLocaleString("en-IN")}
+                    </p>
+
+
+                    <div class="quantity">
+
+                        <button
+                            onclick="decreaseQuantity(${index})">
+                            −
+                        </button>
+
+                        <span>
+                            ${product.quantity}
+                        </span>
+
+                        <button
+                            onclick="increaseQuantity(${index})">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-actions">
+
+                    <p class="total-price">
+
+                        ₹${(
+                            Number(product.price) *
+                            product.quantity
+                        ).toLocaleString("en-IN")}
+
+                    </p>
+
+
+                    <button
+                        class="remove-btn"
+                        onclick="removeProduct(${index})">
+
+                        🗑 Remove
+
+                    </button>
+
+                </div>
+
+            `;
+
+
+            cartItems.appendChild(item);
+
+        });
+
+
+        // ==============================
+        // CART COUNT
+        // ==============================
+
+        cartCount.innerText =
+            totalItems +
+            (totalItems === 1 ? " Item" : " Items");
+
+
+        // UPDATE PRICE
+        updateTotal();
+    }
+
+
+    // ==============================
+    // INCREASE QUANTITY
+    // ==============================
+
+    function increaseQuantity(index) {
+
+        if (cart[index]) {
+
+            cart[index].quantity++;
+
+            saveCart();
+
+        }
+    }
+
+
+    // ==============================
+    // DECREASE QUANTITY
+    // ==============================
+
+    function decreaseQuantity(index) {
+
+        if (cart[index]) {
+
+            if (cart[index].quantity > 1) {
+
+                cart[index].quantity--;
+
+            } else {
+
+                // Remove product if quantity reaches 0
+                cart.splice(index, 1);
+
+            }
+
+            saveCart();
+
+        }
+    }
+
+
+    // ==============================
+    // REMOVE PRODUCT
+    // ==============================
+
+    function removeProduct(index) {
+
+        if (cart[index]) {
+
+            cart.splice(index, 1);
+
+            saveCart();
+
+        }
+    }
+
+
+    // ==============================
+    // SAVE CART
+    // ==============================
+
+    function saveCart() {
+
+        localStorage.setItem(
+            "cart",
+            JSON.stringify(cart)
+        );
+
+        displayCart();
+    }
+
+
+    // ==============================
+    // UPDATE TOTAL
+    // ==============================
+
+    function updateTotal() {
+
+        let subtotal = 0;
+
+        cart.forEach(product => {
+
+            subtotal +=
+                Number(product.price) *
+                Number(product.quantity);
+
+        });
+
+
+        // SUBTOTAL
+
+        document.getElementById("subtotal").innerText =
+            "₹" + subtotal.toLocaleString("en-IN");
+
+
+        // DISCOUNT
+
+        let discount = 0;
+
+        if (subtotal > 0) {
+            discount = 1000;
+        }
+        let total = subtotal - discount;
+
+        if (total < 0) {
+            total = 0;
+        }
+
+
+        document.getElementById("totalAmount").innerText =
+            "₹" + total.toLocaleString("en-IN");
+
+
+        // UPDATE DISCOUNT TEXT
+
+        const discountElement =
+            document.querySelector(".discount");
+
+        if (discountElement) {
+
+            discountElement.innerText =
+                "− ₹" + discount.toLocaleString("en-IN");
+
+        }
+
+
+        // UPDATE SAVINGS MESSAGE
+
+        const savings =
+            document.querySelector(".savings");
+
+        if (savings) {
+
+            savings.innerText =
+                "🎉 You will save ₹" +
+                discount.toLocaleString("en-IN") +
+                " on this order";
+
+        }
+
+    }
+    function placeOrder() {
+
+        if (cart.length === 0) {
+
+            alert("Your cart is empty!");
+
+            return;
+        }
+        alert("Order placed successfully! 🎉");
+        cart = [];
+        localStorage.removeItem("cart");
+        displayCart();
+    }
+    displayCart();
+
+    function goToPlaceOrder() {
+
+            const cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+
+            if (cart.length === 0) {
+
+                alert("Your cart is empty.");
+
+                return;
+            }
+
+
+            const username =
+                localStorage.getItem("username");
+
+
+            if (!username) {
+
+                alert(
+                    "Please login first before placing your order."
+                );
+
+                localStorage.setItem(
+                    "redirectAfterLogin",
+                    "place-order.html"
+                );
+
+                window.location.href =
+                    "loginpage.html";
+
+                return;
+            }
+
+
+            window.location.href =
+                "place-order.html";
+        }
+
+
+</script>
+
+
+
+</body>
+
+</html>

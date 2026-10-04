@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AMFLIP - Place Order</title>
+
+    <link rel="stylesheet" href="place-order.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <a href="frontend.html">
+                <span>AM</span>FLIP
+            </a>
+
+            <small>Explore <b>Plus</b> ✦</small>
+        </div>
+
+        <div class="page-title">
+            Place Your Order
+        </div>
+
+        <a href="cart.html" class="back-cart">
+            🛒 Back to Cart
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="order-container">
+
+        <!-- LEFT SIDE -->
+        <section class="order-left">
+
+            <!-- LOGIN -->
+            <div class="order-box">
+
+                <div class="box-title">
+                    <span class="number">1</span>
+                    LOGIN
+                </div>
+
+                <div id="loginSection">
+
+                    <p id="loginMessage">
+                        Checking login...
+                    </p>
+
+                    <button id="loginButton" onclick="goToLogin()" class="login-btn">
+                        LOGIN
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DELIVERY -->
+            <div class="order-box">
+
+                <div class="box-title">
+                    <span class="number">2</span>
+                    DELIVERY ADDRESS
+                </div>
+
+                <div class="address-form">
+
+                    <div class="row">
+
+                        <input type="text" id="fullName" placeholder="Full Name">
+
+                        <input type="tel" id="phone" placeholder="10-digit Mobile Number">
+
+                    </div>
+
+
+                    <textarea id="address" placeholder="Address"></textarea>
+
+
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="text" id="city"  placeholder="City" autocomplete="off" >
+                            <div id="citySuggestions" class="suggestions"></div>
+                        </div>
+                    
+                        <input type="text" id="District" placeholder="District" readonly>
+                    
+                        <input type="text" id="pincode" placeholder="Pincode" readonly>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- ORDER ITEMS -->
+            <div class="order-box">
+
+                <div class="box-title">
+
+                    <span class="number">3</span>
+
+                    ORDER SUMMARY
+
+                </div>
+
+
+                <div id="orderItems">
+
+                    <!-- Products appear here -->
+
+                </div>
+
+            </div>
+
+
+            <!-- PAYMENT -->
+            <div class="order-box">
+
+                <div class="box-title">
+
+                    <span class="number">4</span>
+
+                    PAYMENT METHOD
+
+                </div>
+
+
+                <div class="payment-options">
+
+                    <label>
+                        <input type="radio" name="payment" value="COD" >
+
+                        💵Cash on Delivery
+                    </label>
+
+
+                    <label>
+                        <input type="radio" name="payment" value="UPI">
+                        UPI
+                    </label>
+
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="CARD" id="cardPayment">
+                    <span>💳 Credit / Debit Card</span>
+                </label>
+                
+                <div id="cardDetails" class="card-details">
+                    <h3>Card Details</h3>
+                    <div class="card-top-row">
+                        <div class="form-group">
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                
+                        <div class="form-group">
+                            <input type="text" id="cardName" name="cardName" placeholder="NAME ON CARD">
+                        </div>
+                    </div>
+                    <div class="card-bottom-row">
+                        <div class="form-group">
+                            <select id="expiryMonth" name="expiryMonth">
+                                <option value="">Month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>    
+                        <div class="form-group">
+                            <select id="expiryYear" name="expiryYear">
+                                <option value="">Year</option>
+                                <option>2026</option>
+                                <option>2027</option>
+                                <option>2028</option>
+                                <option>2029</option>
+                                <option>2030</option>
+                                <option>2031</option>
+                                <option>2032</option>
+                                <option>2033</option>
+                                <option>2034</option>
+                                <option>2035</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="cvv" name="cvv" placeholder="••••" maxlength="4">
+                        </div>
+                
+                    </div>
+                
+                    </div>
+
+                
+                    </div>
+                
+                </div>
+
+
+
+                </div>
+
+            </div>
+
+
+            <button class="place-order-btn" onclick="placeOrder()">
+
+                PLACE ORDER
+
+            </button>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+        <aside class="price-box">
+
+            <h2>PRICE DETAILS</h2>
+
+            <div class="price-line">
+
+                <span>Price</span>
+
+                <span id="subtotal">
+                    ₹0
+                </span>
+
+            </div>
+
+
+            <div class="price-line">
+
+                <span>Delivery</span>
+
+                <span class="free">
+                    FREE
+                </span>
+
+            </div>
+
+
+            <div class="price-line">
+
+                <span>Discount</span>
+
+                <span class="discount">
+                    - ₹0
+                </span>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="total">
+
+                <strong>Total Amount</strong>
+
+                <strong id="totalAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- SUCCESS POPUP -->
+    <div id="successPopup" class="success-popup">
+
+        <div class="success-card">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Order Placed Successfully!
+            </h2>
+
+            <p>
+                Thank you for shopping with AMFLIP.
+            </p>
+
+            <button onclick="goHome()">
+                CONTINUE SHOPPING
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+            const cardNumber = document.getElementById("cardNumber");
+                cardNumber.addEventListener("input", function (e) {
+                    let value = e.target.value.replace(/\D/g, "");
+                    value = value.substring(0, 16);
+                    value = value.replace(/(.{4})/g, "$1 ").trim();
+                    e.target.value = value;
+                });
+            const paymentOptions = document.querySelectorAll('input[name="payment"]');
+            const cardDetails = document.getElementById("cardDetails");
+            paymentOptions.forEach(function(payment) {
+                payment.addEventListener("change", function () {
+                    if (this.value === "CARD") {
+                        cardDetails.style.display = "block";
+                    } else {
+                        cardDetails.style.display = "none";
+                    }
+                    });
+            });
+        
+
+
+                const tamilNaduCities = [
+                {city: "Chennai", district: "Chennai", pincode: "600001" },
+                {city: "Coimbatore", district: "Coimbatore", pincode: "641001" },
+                {city: "Madurai", district: "Madurai", pincode: "625001" },
+                {city: "Tiruppur", district: "Tiruppur", pincode: "641601" },
+                {city: "Salem", district: "Salem", pincode: "636001" },
+                {city: "Erode", district: "Erode", pincode: "638001" },
+                {city: "Trichy", district: "Tiruchirappalli", pincode: "620001" },
+                {city: "Thanjavur",  district: "Thanjavur", pincode: "613001" },
+                {city: "Vellore", district: "Vellore", pincode: "632001" },
+                {city: "Thoothukudi", district: "Thoothukudi", pincode: "628001" },
+                {city: "Tirunelveli", district: "Tirunelveli", pincode: "627001" },
+                {city: "Dindigul", district: "Dindigul", pincode: "624001" },
+                {city: "Karur", district: "Karur", pincode: "639001" },
+                {city: "Namakkal", district: "Namakkal", pincode: "637001" },
+                {city: "Hosur", district: "Krishnagiri", pincode: "635109" },
+                {city: "Cuddalore", district: "Cuddalore", pincode: "607001" },
+                {city: "Kanchipuram", district: "Kanchipuram", pincode: "631501" },
+                {city: "Tiruvannamalai", district: "Tiruvannamalai", pincode: "606601" }
+                ];
+
+                const cityInput = document.getElementById("city");
+                const districtInput = document.getElementById("District");
+                const pincodeInput = document.getElementById("pincode");
+                const suggestions = document.getElementById("citySuggestions");
+
+                cityInput.addEventListener("input", function () {
+
+    const search = this.value.toLowerCase().trim();
+
+                suggestions.innerHTML = "";
+
+                if (search === "") {
+                    districtInput.value = "";
+                pincodeInput.value = "";
+                return;
+    }
+
+    const results = tamilNaduCities.filter(item =>
+                item.city.toLowerCase().startsWith(search)
+                );
+
+    results.forEach(item => {
+
+        const div = document.createElement("div");
+
+                div.textContent = item.city;
+
+                div.addEventListener("click", function () {
+
+                    cityInput.value = item.city;
+                districtInput.value = item.district;
+                pincodeInput.value = item.pincode;
+
+                suggestions.innerHTML = "";
+        });
+
+                suggestions.appendChild(div);
+    });
+});
+        
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+            const username = localStorage.getItem("username");
+            const loginMessage = document.getElementById("loginMessage");
+            const loginButton = document.getElementById("loginButton");
+            if (username) {
+                loginMessage.innerText = "Logged in as " + username;
+                loginMessage.style.color = "green";
+                loginButton.style.display = "none";
+            } else {
+                loginMessage.innerText ="Please login before placing your order.";
+                loginMessage.style.color = "red";
+                loginButton.style.display = "inline-block";
+            }
+
+            function goToLogin() {
+                localStorage.setItem(
+                    "redirectAfterLogin",
+                    "place-order.html"
+                );
+                window.location.href = "loginpage.html";
+            }
+
+            function displayOrderItems() {
+                const container = document.getElementById("orderItems");
+                container.innerHTML = "";
+                if (cart.length === 0) {
+                    container.innerHTML = `
+            <p style="color:red;">
+                Your cart is empty.
+            </p>
+        `;
+                    return;
+                }
+                cart.forEach(product => {
+                    const item = document.createElement("div");
+                    item.className = "order-item";
+                    const total =
+                        Number(product.price) *
+                        Number(product.quantity);
+                    item.innerHTML = `
+            <img
+                src="${product.image}"
+                alt="${product.name}"
+            >
+            <div class="item-details">
+                <h3>
+                    ${product.name}
+                </h3>
+                <p>
+                    Quantity:
+                    ${product.quantity}
+                </p>
+                <p class="item-price">
+                    ₹${total.toLocaleString("en-IN")}
+                </p>
+            </div>
+        `;
+                    container.appendChild(item);
+                });
+            }
+            function updatePrice() {
+                let subtotal = 0;
+                cart.forEach(product => {
+                    subtotal +=
+                        Number(product.price) *
+                        Number(product.quantity);
+                });
+                document.getElementById("subtotal").innerText =
+                    "₹" + subtotal.toLocaleString("en-IN");
+                document.getElementById("totalAmount").innerText =
+                    "₹" + subtotal.toLocaleString("en-IN");
+            }
+            async function placeOrder() {
+                if (!username) {
+                    alert(
+                        "Please login first before placing your order."
+                    );
+                    goToLogin();
+                    return;
+                }
+                if (cart.length === 0) {
+                    alert(
+                        "Your cart is empty."
+                    );
+                    window.location.href =  "cart.html";
+                    return;
+                }
+                const fullName = document.getElementById("fullName").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const address = document.getElementById("address").value.trim();
+                const city = document.getElementById("city").value.trim();
+                const District = document.getElementById("District").value.trim();
+                const pincode = document.getElementById("pincode").value.trim();
+                if (
+                    !fullName ||
+                    !phone ||
+                    !address ||
+                    !city ||
+                    !District||
+                    !pincode
+                ) {
+                    alert(
+                        "Please fill all delivery details."
+                    );
+                    return;
+                }
+                if (!/^[0-9]{10}$/.test(phone)) {
+                    alert(
+                        "Please enter a valid 10-digit mobile number."
+                    );
+                    return;
+                }
+                if (!/^[0-9]{6}$/.test(pincode)) {
+                    alert(
+                        "Please enter a valid 6-digit pincode."
+                    );
+                    return;
+                }
+                let totalAmount = 0;
+                cart.forEach(product => {
+                    totalAmount +=
+                        Number(product.price) *
+                        Number(product.quantity);
+                });
+                const selectedPayment =
+                    document.querySelector(
+                        'input[name="payment"]:checked'
+                    );
+                if (!selectedPayment) {
+                    alert("Please select a payment method.");
+                    return;
+                }
+                const payment = selectedPayment.value;
+                const orderData = {
+                    username: username,
+                    full_name: fullName,
+                    phone: phone,
+                    address: address,
+                    city: city,
+                    District: District,
+                    pincode: pincode,
+                    payment_method: payment,
+                    total_amount: totalAmount,
+                    items: cart
+                };
+                try {
+                    const response =
+                        await fetch(
+                            "http://127.0.0.1:8000/orders",
+                            {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+                                body:
+                                    JSON.stringify(orderData)
+                            }
+                        );
+                    const result =
+                        await response.json();
+                    if (!response.ok) {
+                        alert(
+                            result.detail ||
+                            "Order failed."
+                        );
+                        return;
+                    }
+                    localStorage.removeItem("cart");
+                    document.getElementById(
+                        "successPopup"
+                    ).style.display = "flex";
+                } catch (error) {
+                    console.error(error);
+                    alert(
+                        "Cannot connect to the server. Please start FastAPI."
+                    );
+                }
+            }
+            function goHome() {
+
+                window.location.href =
+                    "frontend.html";
+
+            }
+            displayOrderItems();
+            updatePrice();
+    </script>
+</body>
+
+</html>

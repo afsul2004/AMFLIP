@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMFLIP - Online Shopping</title>
+    <link rel="stylesheet" href="./laptop.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <span>AM</span>FLIP
+            <small>Explore <b>Plus</b> ✦</small>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button>🔍</button>
+        </div>
+
+        <div class="header-links">
+            <a href="loginpage.html" id="loginUser">Login</a>
+            <a href="#">Become a Seller</a>
+            <a href="#">More ▾</a>
+            <div class="cart" onclick="window.location.href='cart.html'">
+                🛒<span id="cartCount" class="cart-count">0</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- CATEGORY SECTION -->
+    <section class="categories">
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./frontend.html">🏠</a>
+            </div>
+            <p>Home</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./mobile.html">📱</a>
+            </div>
+            <p>Mobiles</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./laptop.html">💻</a>
+            </div>
+            <p>Electronics</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./fashion.html">👕</a>
+            </div>
+            <p>Fashion</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./tv&app.html">📺</a>
+            </div>
+            <p>TV & Appliances</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./furniture,homepp.html">🛋️</a>
+            </div>
+            <p>Furniture & Appliances</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./grocery.html">🛒</a>
+            </div>
+            <p>Grocery</p>
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            <h2>Deals of the Day</h2>
+        </div>
+
+        <div class="products">
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/sling-bag/7/d/a/ling-bag-for-women-and-girls-ladies-purse-woman-handbag-1-20-resized-original-imahbfh4wky23v3p.jpeg?q=90"
+                    alt="">
+
+                <h3>Carissa Blue Women Sling Bag for Women and Girls Handbag</h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹2,499
+                    <del>₹3,499</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+
+                <button class="add-cart" onclick="addToCart(
+                        'Carissa Blue Women Sling Bag for Women and Girls Handbag',
+                        2499,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/sling-bag/7/d/a/ling-bag-for-women-and-girls-ladies-purse-woman-handbag-1-20-resized-original-imahbfh4wky23v3p.jpeg?q=90'
+                    )">
+                    🛒 Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/sling-bag/1/0/5/ling-bag-for-women-and-girls-ladies-purse-woman-handbag-1-18-resized-original-imahcf9guvzema8a.jpeg?q=90"
+                    alt="">
+
+                <h3> Maroon Womenling Bag for Women and Girls, Ladies Purse </h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹4,499
+                    <del>₹5,499</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Maroon Womenling Bag for Women and Girls, Ladies Purse',
+                        4499,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/sling-bag/1/0/5/ling-bag-for-women-and-girls-ladies-purse-woman-handbag-1-18-resized-original-imahcf9guvzema8a.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/580/xif0q/sling-bag/2/q/r/affordable-luxury-fashion-handbag-for-modern-women-1-10-0-original-imahnz9avjwhmphh.jpeg?q=90"
+                    alt="">
+
+                <h3>TrendStore White Women Sling Bag luxury handbag for women </h3>
+
+                <p class="rating">★ 4.8</p>
+
+                <p class="price">
+                    ₹2,609
+                    <del>₹3,609</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'TrendStore White Women Sling Bag luxury handbag for women',
+                        2609,
+                        'https://rukminim3.flixcart.com/image/480/580/xif0q/sling-bag/2/q/r/affordable-luxury-fashion-handbag-for-modern-women-1-10-0-original-imahnz9avjwhmphh.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukmini1.flixcart.com/image/1500/1500/xif0q/sling-bag/v/g/p/combo-sling-bag-for-women-fancy-off-white-and-black-ladies-purse-resized-original-imahmr3btsunqz7y.jpeg?q=70"
+                    alt="">
+
+                <h3>Feetglow Black, White Women Sling Bag Combo fancy ladies purse(Pack of 2)</h3>
+
+                <p class="rating">★ 4.7</p>
+
+                <p class="price">
+                    ₹3,699
+                    <del>₹4,699</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Feetglow Black, White Women Sling Bag Combo fancy ladies purse (Pack of 2)',
+                        3699,
+                        'https://rukmini1.flixcart.com/image/1500/1500/xif0q/sling-bag/v/g/p/combo-sling-bag-for-women-fancy-off-white-and-black-ladies-purse-resized-original-imahmr3btsunqz7y.jpeg?q=70',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/n/f/j/-original-imahggf8uz67y4p4.jpeg?q=90"
+                    alt="">
+
+                <h3>DKNY Women Blue Hand-held Bag </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹11,389
+                    <del>₹12,389</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'DKNY Women Blue Hand-held Bag',
+                        11389,
+                        'https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/n/f/j/-original-imahggf8uz67y4p4.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/6/8/l/callie-satchel-handbag-16-mhb0079sc-wn-satchel-miraggio-26-5-original-imahhyapk6jrcdct.jpeg?q=90"
+                    alt="">
+
+                <h3>Miraggio Women Maroon Satchel</h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹2,999
+                    <del>₹3,999</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Miraggio Women Maroon Satchel ',
+                        2999,
+                        'https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/6/8/l/callie-satchel-handbag-16-mhb0079sc-wn-satchel-miraggio-26-5-original-imahhyapk6jrcdct.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/t/l/o/emma-shoulder-bag-mhb0051sh-gr-shoulder-bag-miraggio-watermarked-original-imahfmmhh25dq79h.jpeg?q=90"
+                    alt="">
+
+                <h3>Miraggio Women Green Shoulder Bag</h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹4,599
+                    <del>₹5,599</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Miraggio Women Green Shoulder Bag',
+                        4599,
+                        'https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/t/l/o/emma-shoulder-bag-mhb0051sh-gr-shoulder-bag-miraggio-watermarked-original-imahfmmhh25dq79h.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/v/a/c/women-fancy-off-white-shoulder-bag-11-lwhb02512offwhite-shoulder-watermarked-original-imahfzzreruvpnga.jpeg?q=90"
+                    alt="">
+
+                <h3>LINO PERROS Women Beige Shoulder Bag </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹2,869
+                    <del>₹3,869</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'LINO PERROS Women Beige Shoulder Bag',
+                        2869,
+                        'https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/v/a/c/women-fancy-off-white-shoulder-bag-11-lwhb02512offwhite-shoulder-watermarked-original-imahfzzreruvpnga.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/e/m/d/-original-imahmx4zjph5ehze.jpeg?q=90"
+                    alt="">
+
+                <h3>Fastrack Women Pink Shoulder Bag</h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹2,058
+                    <del>₹3,058</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'Fastrack Women Pink Shoulder Bag',
+                                    2058,
+                                    'https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/e/m/d/-original-imahmx4zjph5ehze.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/q/x/s/voyage-flawless-5-lwhb02506-shoulder-bag-lino-perros-14-original-imahrggq7h9hwvkr.jpeg?q=90"
+                    alt="">
+
+                <h3>LINO PERROS Women Brown Shoulder Bag </h3>
+
+                <p class="rating">★ 4.9</p>
+
+                <p class="price">
+                    ₹2,199
+                    <del>₹3,199</del>
+                </p>
+
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'LINO PERROS Women Brown Shoulder Bag',
+                                    2199,
+                                    'https://rukminim2.flixcart.com/image/1534/1534/xif0q/hand-messenger-bag/q/x/s/voyage-flawless-5-lwhb02506-shoulder-bag-lino-perros-14-original-imahrggq7h9hwvkr.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+
+
+            </div>
+
+
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/sunglass/i/8/e/medium-ess1018c3sg-espee-original-imahgnmqtcwzrbfe.jpeg?q=90" alt="">
+                </a>
+
+                <h3>Espee Gradient Butterfly Sunglasses (53) (For Women, Brown)</h3>
+
+                <p class="rating">★ 4.7</p>
+
+                <p class="price">
+                    ₹2,377
+                    <del>₹3,377</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                        'Espee Gradient Butterfly Sunglasses (53) (For Women, Brown)',
+                        2377,
+                        'https://rukminim3.flixcart.com/image/480/640/xif0q/sunglass/i/8/e/medium-ess1018c3sg-espee-original-imahgnmqtcwzrbfe.jpeg?q=90',
+                        'Extra ₹1,000 off'
+                    )">
+                    🛒 Cart
+                </button>
+
+            </div>
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/sunglass/c/l/k/52-9032-voyage-original-imahfk3caeymhgtj.jpeg?q=90"
+                    alt="">
+
+                <h3>VOYAGE UV Protection Rectangular Sunglasses (52) (For Men & Women, Black)</h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹2,861
+                    <del>₹3,861</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'VOYAGE UV Protection Rectangular Sunglasses (52) (For Men & Women, Black)',
+                                    2861,
+                                    'https://rukminim3.flixcart.com/image/480/640/xif0q/sunglass/c/l/k/52-9032-voyage-original-imahfk3caeymhgtj.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim3.flixcart.com/image/480/640/xif0q/sunglass/v/d/z/50-b80580-voyage-original-imahdhzacrjmhpun.jpeg?q=90"
+                    alt="">
+
+                <h3>VOYAGE UV Protection Oval Sunglasses (For Men & Women, Black, Golden) </h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹2,970
+                    <del>₹3,970</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'VOYAGE UV Protection Oval Sunglasses (For Men & Women, Black, Golden)',
+                                    2970,
+                                    'https://rukminim3.flixcart.com/image/480/640/xif0q/sunglass/v/d/z/50-b80580-voyage-original-imahdhzacrjmhpun.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/1534/1534/xif0q/sunglass/a/l/w/fit-all-retro-small-rectangle-sunglasses-women-vintage-square-original-imagrugeqa5gxemg.jpeg?q=90"
+                    alt="">
+
+                <h3>Legend Eyewear UV Protection, Night Vision, Retro Square Sunglasses (For Men & Women)</h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹2,299
+                    <del>₹3,299</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'Legend Eyewear UV Protection, Night Vision, Retro Square Sunglasses (For Men & Women)',
+                                    2299,
+                                    'https://rukminim2.flixcart.com/image/1534/1534/xif0q/sunglass/a/l/w/fit-all-retro-small-rectangle-sunglasses-women-vintage-square-original-imagrugeqa5gxemg.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="discount">20% OFF</div>
+
+                <img src="https://rukminim2.flixcart.com/image/1534/1534/xif0q/sunglass/r/f/c/free-size-6116-b-bla-kingsunglasses-original-imahbhkedhgnkt4x.jpeg?q=90"
+                    alt="">
+
+                <h3> Vpress UV Protection, Gradient Oval Sunglasses (Free Size) (For Women, Black)</h3>
+
+                <p class="rating">★ 4.6</p>
+
+                <p class="price">
+                    ₹2,599
+                    <del>₹3,599</del>
+                </p>
+                <p class="offer">Extra ₹1,000 off</p>
+                <button class="add-cart" onclick="addToCart(
+                                    'Vpress UV Protection, Gradient Oval Sunglasses (Free Size) (For Women, Black)',
+                                    2599,
+                                    'https://rukminim2.flixcart.com/image/1534/1534/xif0q/sunglass/r/f/c/free-size-6116-b-bla-kingsunglasses-original-imahbhkedhgnkt4x.jpeg?q=90',
+                                    'Extra ₹1,000 off'
+                                )">
+                    🛒 Cart
+                </button>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <script>
+        const loginUser = document.getElementById("loginUser");
+        const username = localStorage.getItem("username");
+        if (username) {
+            loginUser.innerText = username;
+            loginUser.href = "logoutpage.html";
+        } else {
+
+            loginUser.innerText = "Login";
+            loginUser.href = "loginpage.html";
+
+        }
+
+        //cart to add the product....
+
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existingProduct = cart.find(product => product.name === name);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            function addToCart(product) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existingProduct = cart.find(
+                    item => item.name === product.name
+                );
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    product.quantity = 1;
+                    cart.push(product);
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+            }
+            // window.location.href = "cart.html";
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(
+                localStorage.getItem("cart")
+            ) || [];
+            let totalItems = 0;
+            cart.forEach(product => {
+                totalItems += Number(product.quantity) || 1;
+            });
+            const cartCount = document.getElementById("cartCount");
+            if (cartCount) {
+                cartCount.innerText = totalItems;
+            }
+        }
+        // Update when page loads
+        updateCartCount();
+
+
+
+    </script>
+</body>
+
+</html>

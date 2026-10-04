@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMFLIP - Online Shopping</title>
+    <link rel="stylesheet" href="./tv&app.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <span>AM</span>FLIP
+            <small>Explore <b>Plus</b> ✦</small>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button>🔍</button>
+        </div>
+
+        <div class="header-links">
+            <a href="loginpage.html" id="loginUser">Login</a>
+            <a href="#">Become a Seller</a>
+            <a href="#">More ▾</a>
+            <div class="cart" onclick="window.location.href='cart.html'">
+                🛒<span id="cartCount" class="cart-count">0</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- CATEGORY SECTION -->
+    <section class="categories">
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./frontend.html">🏠</a>
+            </div>
+            <p>Home</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./mobile.html">📱</a>
+            </div>
+            <p>Mobiles</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./laptop.html">💻</a>
+            </div>
+            <p>Electronics</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./fashion.html">👕</a>
+            </div>
+            <p>Fashion</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./tv&app.html">📺</a>
+            </div>
+            <p>TV & Appliances</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./furniture,homepp.html">🛋️</a>
+            </div>
+            <p>Furniture & Appliances</p>
+        </div>
+
+
+        <div class="category">
+            <div class="category-icon">
+                <a href="./grocery.html">🛒</a>
+            </div>
+            <p>Grocery</p>
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            <h2>Deals of the Day</h2>
+        </div>
+
+        <div class="products">
+        
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+                <div class="discount">15% OFF</div>
+                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80"
+                    alt="India Gate Basmati Rice">
+                <h3>India Gate Basmati Rice 5 Kg</h3>
+                <p class="rating">★ 4.6</p>
+                <p class="price">₹699 <del>₹829</del></p>
+                <p class="offer">Extra ₹50 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'India Gate Basmati Rice 5 Kg',
+                    699,
+                    'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹50 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 2 -->
+            <div class="product-card">
+                <div class="discount">12% OFF</div>
+                <img src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=600&q=80"
+                    alt="Aashirvaad Atta">
+                <h3>Aashirvaad Shudh Chakki Atta 5 Kg</h3>
+                <p class="rating">★ 4.7</p>
+                <p class="price">₹299 <del>₹339</del></p>
+                <p class="offer">Extra ₹20 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Aashirvaad Shudh Chakki Atta 5 Kg',
+                    299,
+                    'https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹20 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 3 -->
+            <div class="product-card">
+                <div class="discount">10% OFF</div>
+                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80"
+                    alt="Sunflower Cooking Oil">
+                <h3>Fortune Sunflower Refined Cooking Oil 5 L</h3>
+                <p class="rating">★ 4.5</p>
+                <p class="price">₹699 <del>₹779</del></p>
+                <p class="offer">Extra ₹30 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Fortune Sunflower Refined Cooking Oil 5 L',
+                    699,
+                    'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹30 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 4 -->
+            <div class="product-card">
+                <div class="discount">14% OFF</div>
+                <img src="https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=600&q=80"
+                    alt="Toor Dal">
+                <h3>Organic Toor Dal 1 Kg</h3>
+                <p class="rating">★ 4.4</p>
+                <p class="price">₹159 <del>₹185</del></p>
+                <p class="offer">Extra ₹10 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Organic Toor Dal 1 Kg',
+                    159,
+                    'https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹10 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 5 -->
+            <div class="product-card">
+                <div class="discount">18% OFF</div>
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80"
+                    alt="Indian Spices">
+                <h3>Premium Indian Spices Combo Pack</h3>
+                <p class="rating">★ 4.6</p>
+                <p class="price">₹249 <del>₹299</del></p>
+                <p class="offer">Extra ₹25 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Premium Indian Spices Combo Pack',
+                    249,
+                    'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹25 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 6 -->
+            <div class="product-card">
+                <div class="discount">11% OFF</div>
+                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+                    alt="Chana Dal">
+                <h3>Premium Chana Dal 1 Kg</h3>
+                <p class="rating">★ 4.5</p>
+                <p class="price">₹119 <del>₹135</del></p>
+                <p class="offer">Extra ₹10 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Premium Chana Dal 1 Kg',
+                    119,
+                    'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹10 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 7 -->
+            <div class="product-card">
+                <div class="discount">20% OFF</div>
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT8QFu2dMMTjOW7AX5zlK9uXyOKzHq3JF34BwPBdC-YV5coQ9o5--vUGI_CUJZRO7jc-ssCvaT3j86LNefb8EdOhalClCqs3pXRgnCNXdpbrCBTqKPuF4m0m_9Gb4z3Te-tLTBstTo&usqp=CAc"
+                    alt="Green Moong Dal">
+                <h3>Organic Green Moong Dal 1 Kg</h3>
+                <p class="rating">★ 4.6</p>
+                <p class="price">₹139 <del>₹175</del></p>
+                <p class="offer">Extra ₹15 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Organic Green Moong Dal 1 Kg',
+                    139,
+                    'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT8QFu2dMMTjOW7AX5zlK9uXyOKzHq3JF34BwPBdC-YV5coQ9o5--vUGI_CUJZRO7jc-ssCvaT3j86LNefb8EdOhalClCqs3pXRgnCNXdpbrCBTqKPuF4m0m_9Gb4z3Te-tLTBstTo&usqp=CAc',
+                    'Extra ₹15 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 8 -->
+            <div class="product-card">
+                <div class="discount">16% OFF</div>
+                <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=600&q=80"
+                    alt="Honey">
+                <h3>Pure Natural Honey 500 g</h3>
+                <p class="rating">★ 4.7</p>
+                <p class="price">₹249 <del>₹299</del></p>
+                <p class="offer">Extra ₹20 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Pure Natural Honey 500 g',
+                    249,
+                    'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹20 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 9 -->
+            <div class="product-card">
+                <div class="discount">13% OFF</div>
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80"
+                    alt="Biscuits">
+                <h3>Premium Assorted Biscuits Family Pack</h3>
+                <p class="rating">★ 4.5</p>
+                <p class="price">₹149 <del>₹170</del></p>
+                <p class="offer">Extra ₹10 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Premium Assorted Biscuits Family Pack',
+                    149,
+                    'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹10 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 10 -->
+            <div class="product-card">
+                <div class="discount">15% OFF</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCjBniQGTei8KN56Y3Mgyy9kML0xkO-S1aBhVMHAuKWw&s=10"
+                    alt="Corn Flakes">
+                <h3>Crunchy Corn Flakes Breakfast Cereal 500 g</h3>
+                <p class="rating">★ 4.4</p>
+                <p class="price">₹199 <del>₹235</del></p>
+                <p class="offer">Extra ₹15 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Crunchy Corn Flakes Breakfast Cereal 500 g',
+                    199,
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCjBniQGTei8KN56Y3Mgyy9kML0xkO-S1aBhVMHAuKWw&s=10',
+                    'Extra ₹15 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 11 -->
+            <div class="product-card">
+                <div class="discount">10% OFF</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWjq_03xGl5rZJQ_Tbj2WAwaWZhjdGvWWMB4Xs5EpMQ&s=10"
+                    alt="Sugar">
+                <h3>Premium White Sugar 5 Kg</h3>
+                <p class="rating">★ 4.5</p>
+                <p class="price">₹249 <del>₹279</del></p>
+                <p class="offer">Extra ₹10 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Premium White Sugar 5 Kg',
+                    249,
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWjq_03xGl5rZJQ_Tbj2WAwaWZhjdGvWWMB4Xs5EpMQ&s=10',
+                    'Extra ₹10 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 12 -->
+            <div class="product-card">
+                <div class="discount">17% OFF</div>
+                <img src="https://images.unsplash.com/photo-1608797178974-15b35a64ede9?auto=format&fit=crop&w=600&q=80"
+                    alt="Salt">
+                <h3>Iodized Salt 1 Kg Pack of 3</h3>
+                <p class="rating">★ 4.6</p>
+                <p class="price">₹69 <del>₹83</del></p>
+                <p class="offer">Extra ₹5 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Iodized Salt 1 Kg Pack of 3',
+                    69,
+                    'https://images.unsplash.com/photo-1608797178974-15b35a64ede9?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹5 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 13 -->
+            <div class="product-card">
+                <div class="discount">19% OFF</div>
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                    alt="Bread">
+                <h3>Fresh Whole Wheat Bread 400 g</h3>
+                <p class="rating">★ 4.3</p>
+                <p class="price">₹45 <del>₹55</del></p>
+                <p class="offer">Extra ₹5 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Fresh Whole Wheat Bread 400 g',
+                    45,
+                    'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹5 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 14 -->
+            <div class="product-card">
+                <div class="discount">14% OFF</div>
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+                    alt="Chocolate">
+                <h3>Premium Milk Chocolate Family Pack</h3>
+                <p class="rating">★ 4.7</p>
+                <p class="price">₹199 <del>₹230</del></p>
+                <p class="offer">Extra ₹15 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Premium Milk Chocolate Family Pack',
+                    199,
+                    'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹15 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 15 -->
+            <div class="product-card">
+                <div class="discount">12% OFF</div>
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTCGsiwYlmTgd4A5TGxEDRuqU50407WRdvoPtslRWTugjN6dDpCJxfNjBjJjlHd8WvjiYcbR1lbPE8bwAE3dj7cSGLXYwkgQq9gugMhDbHIyIHErvrqTMoLq1qWFTD6hL7p2TxOgoye&usqp=CAc"
+                    alt="Coffee">
+                <h3>Premium Instant Coffee 200 g</h3>
+                <p class="rating">★ 4.6</p>
+                <p class="price">₹299 <del>₹340</del></p>
+                <p class="offer">Extra ₹20 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Premium Instant Coffee 200 g',
+                    299,
+                    'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTCGsiwYlmTgd4A5TGxEDRuqU50407WRdvoPtslRWTugjN6dDpCJxfNjBjJjlHd8WvjiYcbR1lbPE8bwAE3dj7cSGLXYwkgQq9gugMhDbHIyIHErvrqTMoLq1qWFTD6hL7p2TxOgoye&usqp=CAc',
+                    'Extra ₹20 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 16 -->
+            <div class="product-card">
+                <div class="discount">18% OFF</div>
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+                    alt="Tea">
+                <h3>Premium Assam Tea 500 g</h3>
+                <p class="rating">★ 4.5</p>
+                <p class="price">₹229 <del>₹279</del></p>
+                <p class="offer">Extra ₹15 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Premium Assam Tea 500 g',
+                    229,
+                    'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹15 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 17 -->
+            <div class="product-card">
+                <div class="discount">20% OFF</div>
+                <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80"
+                    alt="Dry Fruits">
+                <h3>Premium Mixed Dry Fruits 500 g</h3>
+                <p class="rating">★ 4.8</p>
+                <p class="price">₹549 <del>₹699</del></p>
+                <p class="offer">Extra ₹50 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Premium Mixed Dry Fruits 500 g',
+                    549,
+                    'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹50 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 18 -->
+            <div class="product-card">
+                <div class="discount">16% OFF</div>
+                <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80"
+                    alt="Fresh Vegetables">
+                <h3>Fresh Organic Vegetables Combo</h3>
+                <p class="rating">★ 4.4</p>
+                <p class="price">₹299 <del>₹359</del></p>
+                <p class="offer">Extra ₹25 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Fresh Organic Vegetables Combo',
+                    299,
+                    'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹25 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 19 -->
+            <div class="product-card">
+                <div class="discount">15% OFF</div>
+                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=600&q=80"
+                    alt="Fresh Fruits">
+                <h3>Fresh Seasonal Fruits Combo Box</h3>
+                <p class="rating">★ 4.5</p>
+                <p class="price">₹349 <del>₹410</del></p>
+                <p class="offer">Extra ₹30 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Fresh Seasonal Fruits Combo Box',
+                    349,
+                    'https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹30 off'
+                )">🛒 Cart</button>
+            </div>
+        
+            <!-- PRODUCT 20 -->
+            <div class="product-card">
+                <div class="discount">21% OFF</div>
+                <img src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&w=600&q=80"
+                    alt="Instant Noodles">
+                <h3>Instant Masala Noodles Family Pack</h3>
+                <p class="rating">★ 4.6</p>
+                <p class="price">₹149 <del>₹189</del></p>
+                <p class="offer">Extra ₹15 off</p>
+                <button class="add-cart" onclick="addToCart(
+                    'Instant Masala Noodles Family Pack',
+                    149,
+                    'https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&w=600&q=80',
+                    'Extra ₹15 off'
+                )">🛒 Cart</button>
+            </div>
+        
+        </div>
+
+
+    </section>
+
+    <script>
+        const loginUser = document.getElementById("loginUser");
+        const username = localStorage.getItem("username");
+        if (username) {
+            loginUser.innerText = username;
+            loginUser.href = "logoutpage.html";
+        } else {
+
+            loginUser.innerText = "Login";
+            loginUser.href = "loginpage.html";
+
+        }
+
+        //cart to add the product....
+
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existingProduct = cart.find(product => product.name === name);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            function addToCart(product) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existingProduct = cart.find(
+                    item => item.name === product.name
+                );
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    product.quantity = 1;
+                    cart.push(product);
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+            }
+            // window.location.href = "cart.html";
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(
+                localStorage.getItem("cart")
+            ) || [];
+            let totalItems = 0;
+            cart.forEach(product => {
+                totalItems += Number(product.quantity) || 1;
+            });
+            const cartCount = document.getElementById("cartCount");
+            if (cartCount) {
+                cartCount.innerText = totalItems;
+            }
+        }
+        // Update when page loads
+        updateCartCount();
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Ecom</title>
+
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+    </div>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <div class="brand">
+                <div class="logo">AMFLIP</div>
+                <h1>Create Account</h1>
+                <p>Create your account to start shopping</p>
+            </div>
+
+            <form onsubmit="registerUser(event)">
+
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a password" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Create Account
+                    <span>→</span>
+                </button>
+
+                <p id="result"></p>
+
+            </form>
+
+            <p class="signup">
+                Already have an account?
+                <a href="loginpage.html">Sign In</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        async function registerUser(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword =document.getElementById("confirmPassword").value.trim();
+            const result = document.getElementById("result");
+
+
+            // Check password
+            if (password !== confirmPassword) {
+
+                result.innerText = "Passwords do not match";
+                return;
+            }
+
+            if (password.length < 6) {
+
+                result.innerText =
+                    "Password must contain at least 6 characters";
+
+                return;
+            }
+
+
+            try {
+
+                const response = await fetch(
+                    "http://127.0.0.1:8000/register",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            password: password
+                        })
+                    }
+                );
+
+
+                const data = await response.json();
+
+                console.log(data);
+
+
+                if (data[0] === "Registration Successful") {
+
+                    setTimeout(function () {
+
+                        window.location.href = "loginpage.html";
+
+                    }, 1000);
+                }
+                else {
+
+                    result.innerText = data[0];
+
+                }
+
+            } catch (error) {
+
+                console.error(error);
+
+                result.innerText =
+                    "Unable to connect to server";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
