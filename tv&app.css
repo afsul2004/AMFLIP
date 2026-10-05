@@ -48,23 +48,13 @@
  /* ================= HEADER ================= */
 
  .header {
-     width: 100%;
-     min-height: 65px;
-
+     height: 65px;
      background: #2874f0;
-
      display: flex;
      align-items: center;
-
-     padding: 10px 4%;
-
-     gap: 25px;
-
+     padding: 0 6%;
+     gap: 30px;
      color: white;
-
-     box-sizing: border-box;
-
-     overflow: hidden;
  }
 
 
@@ -74,9 +64,7 @@
      font-size: 25px;
      font-weight: bold;
      font-style: italic;
-
-     min-width: 110px;
-     flex-shrink: 0;
+     min-width: 120px;
  }
 
  .logo span {
@@ -97,53 +85,32 @@
 
  /* ================= SEARCH ================= */
 
- .search-box {
-     height: 40px;
+.search-box {
+    height: 40px;
+    background: white;
+    display: flex;
+    flex: 1;
+    max-width: 550px;
+    border-radius: 3px;
+    overflow: hidden;
+}
 
-     background: white;
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 14px;
+}
 
-     display: flex;
-
-     flex: 1;
-
-     min-width: 150px;
-     max-width: 550px;
-
-     border-radius: 3px;
-
-     overflow: hidden;
-
-     box-sizing: border-box;
- }
-
- .search-box input {
-     flex: 1;
-
-     min-width: 0;
-
-     border: none;
-     outline: none;
-
-     padding: 0 15px;
-
-     font-size: 14px;
- }
-
- .search-box button {
-     width: 55px;
-
-     flex-shrink: 0;
-
-     border: none;
-
-     background: white;
-
-     color: #2874f0;
-
-     font-size: 18px;
-
-     cursor: pointer;
- }
+.search-box button {
+    width: 55px;
+    border: none;
+    background: white;
+    color: #2874f0;
+    font-size: 18px;
+    cursor: pointer;
+}
 
 
  /* ================= HEADER LINKS ================= */
@@ -231,81 +198,28 @@
 
 
  /* ================= CATEGORY ================= */
-/* 
+
  .categories {
-     background: white;
      min-height: 115px;
+     background: white;
      display: flex;
-     justify-content: center;
      align-items: center;
+     justify-content: center;
      gap: 55px;
      box-shadow: 0 2px 4px #ddd;
- }
 
- .category {
-     text-align: center;
-     cursor: pointer;
-     transition: 0.3s;
- }
-
- .category:hover {
-     transform: translateY(-5px);
- }
-
- .category-icon {
-     font-size: 38px;
-     margin-bottom: 8px;
- }
-
- .category p {
-     font-size: 14px;
-     font-weight: 600;
- } */
-
- /* ================= CATEGORY ================= */
-
- .categories {
-     width: 100%;
-     background: white;
-
-     min-height: 115px;
-
-     display: flex;
-     align-items: center;
-
-     /* Important */
-     justify-content: flex-start;
-
-     gap: 35px;
-
-     padding: 15px 30px;
-
-     box-shadow: 0 2px 4px #ddd;
-
-     /* Prevent categories from going outside */
+     /* Center categories */
      overflow-x: auto;
      overflow-y: hidden;
 
      scrollbar-width: none;
  }
 
- /* Chrome / Edge scrollbar hide */
- .categories::-webkit-scrollbar {
-     display: none;
- }
-
-
  /* Individual category */
 
  .category {
-     flex: 0 0 100px;
-
-     width: 100px;
-
      text-align: center;
-
      cursor: pointer;
-
      transition: 0.3s ease;
  }
 
@@ -319,9 +233,6 @@
  .category-icon {
      font-size: 38px;
      margin-bottom: 8px;
-
-     height: 45px;
-
      display: flex;
      align-items: center;
      justify-content: center;
@@ -333,12 +244,6 @@
  .category p {
      font-size: 14px;
      font-weight: 600;
-
-     line-height: 1.3;
-
-     margin: 0;
-
-     /* Long category name won't escape */
      word-wrap: break-word;
      overflow-wrap: break-word;
  }
